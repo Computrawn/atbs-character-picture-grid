@@ -28,5 +28,4 @@ Also, remember to pass the end keyword argument to print() if you don’t want a
 
 Excerpt From Automate the Boring Stuff with Python: Practical Programming for Total Beginners, 2nd Edition  
 Al Sweigart  
-https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewBook?id=0  
 This material may be protected by copyright.
