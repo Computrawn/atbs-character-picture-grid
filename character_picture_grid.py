@@ -1,23 +1,41 @@
-# Character Picture Grid practice problem
+#!/usr/bin/env python3
+# character_picture_grid.py — An exercise in understanding lists.
+# For more information, see README.md
 
-"""
-Rotate grid 90 degrees clockwise
-"""
+import logging
 
-grid = [['.', '.', '.', '.', '.', '.'],
-        ['.', '0', '0', '.', '.', '.'],
-        ['0', '0', '0', '0', '.', '.'],
-        ['0', '0', '0', '0', '0', '.'],
-        ['.', '0', '0', '0', '0', '0'],
-        ['0', '0', '0', '0', '0', '.'],
-        ['0', '0', '0', '0', '.', '.'],
-        ['.', '0', '0', '.', '.', '.'],
-        ['.', '.', '.', '.', '.', '.']]
+logging.basicConfig(
+    level=logging.DEBUG,
+    filename="logging.txt",
+    format="%(asctime)s -  %(levelname)s -  %(message)s",
+)
+logging.disable(logging.CRITICAL)  # Note out to enable logging.
+
+grid = [
+    [".", ".", ".", ".", ".", "."],
+    [".", "0", "0", ".", ".", "."],
+    ["0", "0", "0", "0", ".", "."],
+    ["0", "0", "0", "0", "0", "."],
+    [".", "0", "0", "0", "0", "0"],
+    ["0", "0", "0", "0", "0", "."],
+    ["0", "0", "0", "0", ".", "."],
+    [".", "0", "0", ".", ".", "."],
+    [".", ".", ".", ".", ".", "."],
+]
+
 
 def rotate90():
-    for y in range (6):
-        for x in range (9):
-            print(grid[x][y], end = '')
+    """Rotate grid 90 degrees clockwise"""
+
+    for y, _ in enumerate(grid[0]):
+        for x, _ in enumerate(grid):
+            print(grid[x][y], end="")
         print()
 
-rotate90()
+
+def main():
+    rotate90()
+
+
+if __name__ == "__main__":
+    main()
