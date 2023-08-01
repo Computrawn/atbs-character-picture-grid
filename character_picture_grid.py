@@ -23,19 +23,10 @@ grid = [
     [".", ".", ".", ".", ".", "."],
 ]
 
+row_count = len(grid[0])
+column_count = len(grid)
 
-def rotate90():
-    """Rotate grid 90 degrees clockwise"""
-
-    for y, _ in enumerate(grid[0]):
-        for x, _ in enumerate(grid):
-            print(grid[x][y], end="")
-        print()
-
-
-def main():
-    rotate90()
-
-
-if __name__ == "__main__":
-    main()
+for i in range(row_count):
+    for j in range(column_count):
+        print(grid[j][i], end="")
+    print()
